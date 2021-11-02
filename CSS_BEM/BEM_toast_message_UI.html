@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css_BEM_toast_message.css">
+</head>
+<body>
+    <div id="toast">
+        <!-- <div class="toast toast--success">
+            <div class="toast__icon">
+                <i class="far fa-check-circle"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__tittle">Success</h3>
+                <p class="toast__msg">Máy tính đã được kết nối Internet(với các hệ điều hành)</p>
+            </div>
+            <div class="toast__close">
+                <i class="fas fa-times-circle"></i>
+            </div>
+        </div> -->
+
+        <!-- <div class="toast toast--info">
+            <div class="toast__icon">
+                <i class="far fa-check-circle"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__tittle">Info</h3>
+                <p class="toast__msg">Máy tính đã được kết nối Internet(với các hệ điều hành)</p>
+            </div>
+            <div class="toast__close">
+                <i class="fas fa-times-circle"></i>
+            </div>
+        </div>
+
+        <div class="toast toast--warning">
+            <div class="toast__icon">
+                <i class="far fa-check-circle"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__tittle">Warning</h3>
+                <p class="toast__msg">Máy tính đã được kết nối Internet(với các hệ điều hành)</p>
+            </div>
+            <div class="toast__close">
+                <i class="fas fa-times-circle"></i>
+            </div>
+        </div>
+
+        <div class="toast toast--error">
+            <div class="toast__icon">
+                <i class="far fa-check-circle"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__tittle">Error</h3>
+                <p class="toast__msg">Máy tính đã được kết nối Internet(với các hệ điều hành)</p>
+            </div>
+            <div class="toast__close">
+                <i class="fas fa-times-circle"></i>
+            </div>
+        </div> -->
+    </div>
+    <div onclick="showSuccessToast()" class="btn btn--success">Show success toast</div>
+    <div onclick="showErrorToast()" class="btn btn--danger">Show danger toast</div>
+    <div onclick="showWarningToast()" class="btn btn--warn">Show warning</div>
+
+    <script>
+        // toast function
+        function toast({
+        tittle='', 
+        message='', 
+        type='info', 
+        duration=3000}){
+            const main = document.getElementById('toast');//gọi đến id=toast trên thẻ div
+            if(main){ //nếu main(id=toast) tồn tại, thì sẽ đọc đến các thông tin toast khai báo ở dưới, tạo ra thẻ div giống như thẻ div ở trên body
+                const toast = document.createElement('div');
+
+                const autoRemoveID = setTimeout(function(){ //auto remove
+                    main.removeChild(toast) //xoá đi thông báo đang hiện và bắt đầu lại
+                },duration + 3000)
+
+                toast.onclick = function(e){ //remove toast bằng tay
+                    // console.log(e.target) //target làclick vào chính cái mà mình click vào
+                     if(e.target.closest('.toast__close')){
+                         main.removeChild(toast);
+                         clearTimeout(autoRemoveID);
+                     }
+                }
+
+                const icons = {
+                    success: 'fas fa-check-circle',
+                    info: 'fas fa-info',
+                    warning: 'fas fa-skull-crossbones',
+                    error: 'fas fa-exclamation-triangle'
+                };
+                const icon = icons[type]; //nhận type tương ứng 
+                const delay = (duration/1000).toFixed(2); //toFixed 2:  lấy ra 2 số thập phân
+                toast.classList.add('toast', `toast--${type}`); //add class mặc định là toast, chưa đưa modifier vào 
+                toast.style.animation = `slideInLeft 0.3s, Fadeout linear 3s ${delay}s forwards` //thời gian của biến $delay là thời gian hiện, thời giai fadeout là thời gian hiệu ứng biến mất
+                toast.innerHTML = `
+                    <div class="toast__icon">
+                        <i class="${icon}"></i>
+                    </div>
+                    <div class="toast__body">
+                        <h3 class="toast__tittle">${tittle}</h3>
+                        <p class="toast__msg">${message}</p>
+                    </div>
+                    <div class="toast__close">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                `; //đưa nội dung con của thẻ div class: toast toast--success
+                main.appendChild(toast); //đưa vào main
+            }
+        }
+        // toast({
+        //     tittle: 'Success',
+        //     message: 'alo alo Máy tính đã kết nối thành công internet',
+        //     type: 'error',
+        //     duration: 3000
+        // });
+
+        function showSuccessToast(){
+            toast({
+                tittle: 'Thành công',
+                message: 'Đã kết nối thành công tài khoản tại F8',
+                type: 'success',
+                duration: 5000
+            })
+        }
+        function showErrorToast(){
+            toast({
+                tittle: 'Thất bại',
+                message: 'Đăng kí không thành công. Có lỗi xảy ra',
+                type: 'error',
+                duration: 5000
+            })
+        }
+        function showWarningToast(){
+            toast({
+                tittle: 'Cảnh báo',
+                message: 'Cảnh báo nguy hiểm',
+                type: 'warning',
+                duration: 5000
+            })
+        }
+
+    </script>
+</body>
+</html>
