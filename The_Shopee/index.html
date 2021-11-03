@@ -15,12 +15,13 @@
     <div class="app">
         <!-- -------Header-------- -->
         <header class="header">
-            <div class="grid">
+            <div class="grid">            <!-- cho vào class grid để set lại width=1200px --> 
                 <nav class="header__navbar">
+                    <!-- --Header__list-left-- -->
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--qr-appear header__navbar-item--separate">
                             Vào cửa hàng trên ứng dụng Shopee
-                            <!-- Header_QR-code -->
+                            <!-- ------Header__QR-code-------- -->
                             <div class="header__qr">
                                 <img class="header__qr-img" src="./assets/img/QRcode.png" alt="">
                                 <div class="header__qr-app">
@@ -37,6 +38,7 @@
                                     </a>
                                 </div>
                             </div>
+                            <!-- End ------Header_QR-code-------- -->
                         </li>
                         <li class="header__navbar-item">
                             <span class="header__navbar-tittle--no-pointer">Kết nối</span>
@@ -48,12 +50,16 @@
                             </a>
                         </li>
                     </ul>
+                    <!-- -----End Header__list-left----- -->
+
+                    <!-- -----Header__list-right--------- -->
                     <ul class="header__navbar-list">
-                        <li class="header__navbar-item">
+                        <li class="header__navbar-item header__navbar-item--notification-appear">
                             <a href="" class="header__navbar-item-link">
                                 <i class="header__navbar-icon fas fa-bell"></i>
                                 Thông báo
                             </a>
+                            <!-- -------------Header_notification----------- -->
                             <div class="header__notification">
                                 <header class="header__notification--header">
                                     <h3>Thông báo mới nhận</h3>
@@ -63,12 +69,21 @@
                                         <a class="header__notification-link" href="">
                                             <img src="https://cf.shopee.vn/file/306708ddc6d58ae3bf75384566d4080b_tn" alt="" class="header__notification-img">
                                             <div class="header__notification-info">
-                                                <span class="header__notification-name">Mỹ phẩm chính hãng</span>
-                                                <span class="header__notification-description">Son môi chính hãng</span>
+                                                <span class="header__notification-name">Đơn hàng #981187225 đã sẵn sàng để giao đến quý khách</span>
+                                                <span class="header__notification-description">húng tôi vừa bàn giao đơn hàng của quý khách đến đối tác vận chuyển Tiki Team. Đơn hàng sẽ được giao trước 21:00 ngày 09/06/2021</span>
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="header__notification-item header__notification-item--readed">
+                                    <li class="header__notification-item ">
+                                        <a class="header__notification-link" href="">
+                                            <img src="https://cf.shopee.vn/file/306708ddc6d58ae3bf75384566d4080b_tn" alt="" class="header__notification-img">
+                                            <div class="header__notification-info">
+                                                <span class="header__notification-name">Hãy thay đổi mật khẩu thường xuyên để nâng cao bảo mật.</span>
+                                                <span class="header__notification-description">Không nên sử dụng chung mật khẩu của email với mật khẩu của các tài khoản khác.Luôn đăng xuất khỏi các tài khoản sau khi sử dụng trên thiết bị công cộng hoặc thiết bị không phải của bản thân.</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- <li class="header__notification-item">
                                         <a class="header__notification-link" href="">
                                             <img src="https://cf.shopee.vn/file/306708ddc6d58ae3bf75384566d4080b_tn" alt="" class="header__notification-img">
                                             <div class="header__notification-info">
@@ -85,21 +100,13 @@
                                                 <span class="header__notification-description">Son môi chính hãng</span>
                                             </div>
                                         </a>
-                                    </li>
-                                    <li class="header__notification-item">
-                                        <a class="header__notification-link" href="">
-                                            <img src="https://cf.shopee.vn/file/306708ddc6d58ae3bf75384566d4080b_tn" alt="" class="header__notification-img">
-                                            <div class="header__notification-info">
-                                                <span class="header__notification-name">Mỹ phẩm chính hãng</span>
-                                                <span class="header__notification-description">Son môi chính hãng</span>
-                                            </div>
-                                        </a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                                 <div class="header__notification-footer">
                                     <a href="" class="header__notification-view-all">Xem tất cả</a>
                                 </div>
                             </div>
+                            <!-- ------------End Header__notification-------- -->
                         </li>
                         <li class="header__navbar-item">
                             <a href="" class="header__navbar-item-link">
@@ -110,9 +117,12 @@
                         <li class="header__navbar-item header__navbar-item--bold header__navbar-item--separate">Đăng kí</li>
                         <li class="header__navbar-item header__navbar-item--bold">Đăng nhập</li>
                     </ul>
+                    <!-- ---------End Header_list-right------- -->
                 </nav>
             </div>
         </header>
+        <!-- ---End Header--- -->
+
         <div class="container">
 
         </div>
