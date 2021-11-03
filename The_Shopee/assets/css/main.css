@@ -1,4 +1,4 @@
-/* ------header--------- */
+/* -----------------------Header---------------- */
 .header{
     height: 120px;
     background-image: linear-gradient(180deg, #f53e2d, #ff6533);
@@ -67,7 +67,7 @@
     cursor: pointer;
 }
 
-/* Header QR code */
+/*- -----Header QR code--- */
 .header__qr{
     width: 187px;
     background-color: var(--white-color);
@@ -115,7 +115,7 @@
     margin-top: 6px;
     
 }
-/* Header notification */
+/* -------------Header notification--------- */
 .header__notification{
     position: absolute;
     top: 120%;
@@ -230,3 +230,5 @@
     font-weight: 400;
     text-align: center;
 }
+
+/* -------------------------Modal------------------------------ */
