@@ -128,7 +128,8 @@
                                 Trợ giúp
                             </a>
                         </li>
-                        <li class="header__navbar-item header__navbar-item--bold header__navbar-item--separate">Đăng kí</li>
+                        <li class="header__navbar-item header__navbar-item--bold header__navbar-item--separate ">Đăng kí
+                        </li>
                         <li class="header__navbar-item header__navbar-item--bold">Đăng nhập</li>
                     </ul>
                     <!-- ---------End Header_list-right------- -->
@@ -141,33 +142,30 @@
 
         </div>
         <div class="footer">
-            <!-- Modal là phần riêng khi ấn vào đăng nhập hoặc đăng kí hoặc 1 số chức năng bật khác  -->
         </div>
-
+        
+        <!-- Modal là phần riêng khi ấn vào đăng nhập hoặc đăng kí hoặc 1 số chức năng bật khác  -->
         <div class="modal">
-            <div class="modal__overlay">
-                
-            </div>
+            <div class="modal__overlay"></div>
             <div class="modal__body">
-                    <!-- Form login/register -->
-
+                <!-- Form login/register -->
+                <div class="auth-form">
                     <!-- container bao quanh từ vùng đăng kí xuống vùng TRỞ LẠI -->
-                <div class="auth-form__container">
-                    <div class="auth-form">
+                    <div class="auth-form__container">
                         <div class="auth-form__header">
-                            <h3 class="auth-form__heading">Đăng kí</h3>
+                            <h3 class="auth-form__heading ">Đăng kí</h3>
                             <span class="auth-form__switch-btn">Đăng nhập</span>
                         </div>
 
                         <div class="auth-form__form">
                             <div class="auth-form__group">
-                                <input class="auth-form__input" type="text" placeholder="Nhập email">                            
+                                <input class="auth-form__input" type="text" placeholder="Nhập email">
                             </div>
                             <div class="auth-form__group">
-                                <input class="auth-form__input" type="password" placeholder="Nhập password">                            
+                                <input class="auth-form__input" type="password" placeholder="Nhập password">
                             </div>
                             <div class="auth-form__group">
-                                <input class="auth-form__input" type="text" placeholder="Xác nhận password">                            
+                                <input class="auth-form__input" type="text" placeholder="Xác nhận password">
                             </div>
                         </div>
                         <div class="auth-form__aside">
@@ -178,25 +176,22 @@
                             </p>
                         </div>
                         <div class="auth-form-control">
-                            <button class="btn">TRỞ LẠI</button>
+                            <button class="btn auth-form-control-back btn--normal">TRỞ LẠI</button>
                             <button class="btn btn--primary">ĐĂNG KÍ</button>
                         </div>
                     </div>
-                </div>
-                <!-- connect bao quanh vùng kết nối facebook và google -->
-                <div class="auth-form__connection">
+                    <!-- social bao quanh vùng kết nối facebook và google -->
                     <div class="auth-form__social">
-                        <a href="" class="btn btn--with-icon">
-                            <i class="fab fa-facebook-square"></i>
-                            Kết nối với Facebook
+                        <a href="" class="auth-form__social--facebook btn btn--size-s btn--with-icon">
+                            <i class="auth-form__social-icon fab fa-facebook-square"></i>
+                            <span class="auth-form__social-tittle"> Kết nối với Facebook</span>
                         </a>
-                        <a href="" class="btn btn--with-icon">
-                            <i class="fab fa-google"></i>
-                            Kết nối với Facebook
+                        <a href="" class="auth-form__social--google btn btn--size-s btn--with-icon">
+                            <i class="auth-form__social-icon fab fa-google"></i>
+                            <span class="auth-form__social-tittle"> Kết nối với Google</span>
                         </a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
