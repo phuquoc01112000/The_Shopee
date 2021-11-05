@@ -78,7 +78,7 @@ html{
 .btn.btn--size-s{
     height: 32px;
     font-size: 12px;
-    padding: 0 25px;
+    padding: 0 10px;
 }
 .btn.btn--normal:hover{
     background-color: rgba(0, 0, 0, 0.05);
