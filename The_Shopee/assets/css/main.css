@@ -410,6 +410,7 @@
     top: -8px;
     right: -6px;
 }
+/* Header__cart--no cart */
 .header__cart-list{
     position: absolute;
     top: calc(100% + 5px);
@@ -418,9 +419,9 @@
     width: 400px;
     border-radius: 2px;
     box-shadow: 0 1px 1.6rem rgba(0, 0, 0, 0.2);
-    display: none;
     animation: FadeIn ease 0.2s;
     cursor: default;
+    display: none;
 }
 .header__cart-list::after{
     cursor: pointer;
@@ -453,7 +454,89 @@
     margin-right: auto;
     display: block;
 }
+
+/* Header__cart-list-item */
+.header__cart-heading{
+    text-align: left;
+    margin: 8px 0 8px 12px;
+    color: #999;
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+.header__cart-list-item{
+    padding-left: 0;
+    list-style: none;
+}
+.header__cart-item{
+    display: flex;
+    align-items: center;
+}
+.header__cart-item:hover{
+    background-color: #f8f8f8;
+}
+.header__cart-item-img{
+    width: 80px;
+    height: 80px;
+    margin: 12px;
+    border: 1px solid #e8e8e8;
+}
+
+.header__cart-item-infomation{
+    width: 100%;
+    padding-right: 12px;
+}
+.header__cart-item-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;}
+.header__cart-item-name{
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0;
+}
+.header__cart-item-price-info{
+    font-weight: 400;
+}
+.header__cart-item-price{
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+.header__cart-item-operator{
+    color: #757575;
+    font-size: 0.9rem;
+    padding: 0 4px;
+}
+.header__cart-item-qnt{
+    font-size: 1.2rem;
+    color: #757575;
+}
+.header__cart-item-body{
+    display: flex;
+    justify-content: space-between;
+}
+.header__cart-item-description{
+    color: #757575;
+    font-size: 1.2rem;
+}
+.header__cart-item-delete{
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+
+}
+.header__cart-item-delete:hover{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.header__cart-view-cart{
+    float: right;
+    margin: 0 12px 12px 0;
+}
+.header__cart-view-cart:hover{
+    background-color: #f05d41;
+}
 /* End Header__cart */
+
 .header__search-input-wrap{
     flex: 1;
     height: 100%;
