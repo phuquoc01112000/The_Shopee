@@ -21,6 +21,84 @@
     position: relative;
     min-height: 26px;
 }
+
+
+/* Header__navbar-item user */
+.header__navbar-item-user{
+    display: flex;
+    /* align-items: center; */
+}
+.header__navbar-item-user:hover .header__navbar-user-info-list{
+    display: block;
+}
+.header__navbar-user-avt{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(39, 25, 25, 0.2);
+}
+.header__navbar-user-name{
+    margin-left: 4px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--white-color);
+}
+.header__navbar-user-info-list{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding-left: 0;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    list-style: none;
+    width: 160px;
+    z-index: 1;
+    box-shadow: 0 1px 2px #c0c0c0;
+    line-height: 3.6rem;
+    display: none;
+}
+.header__navbar-user-info-list::before{ /*Làm dấu mũi tên tam giác*/
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 12px 17px;
+    border-color: transparent transparent var(--white-color) transparent;
+    right: 16px;
+    top: -19px;
+}
+.header__navbar-user-info-list::after{ /*Làm dấu mũi tên tam giác*/
+    content: "";
+    position: absolute;
+    width: 55%;
+    height: 8px;
+    top: -7px;
+    right: 0;
+}
+
+.header__navbar-user-info-item a{
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 4px 0;
+    display: block;
+    padding: 0 16px;
+}
+.header__navbar-user-info-item--separate{
+    border-top: 1px solid rgba(0, 0, 0, 0.05)
+}
+.header__navbar-user-info-item a:hover{
+    background-color: #fafafa;
+}
+.header__navbar-user-info-item a:first-child{
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.header__navbar-user-info-item a:last-child{
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+/* End  Header__navbar-item user*/
+
+
 .header__navbar-item, .header__navbar-item-link{
     color: var(--white-color);
     text-decoration: none;
@@ -28,7 +106,7 @@
 .header__navbar-item,
 .header__navbar-item-link,
 .header__navbar-icon-link{
-    display: inline-flex;
+    display: flex;
     align-items: center;
 
 }
@@ -53,6 +131,9 @@
 .header__navbar-icon-link{
     color: var(--white-color);
     text-decoration: none;
+}
+.header__navbar-icon-link:nth-child(2){
+    margin-left: 3px;
 }
 .header__navbar-icon{
     font-size: 2rem;
@@ -113,20 +194,24 @@
 .header__qr-gallery{
     margin-left: 10px;
     margin-top: 6px;
-    
 }
+/* End Header_qr-code */
+
+
 /* -------------Header notification--------- */
 .header__notification{
     position: absolute;
     top: 120%;
     right: 0;
     width: 404px;
-    border: 1px solid #d3d3d3;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--white-color);
     cursor: default;
-    transform-origin: calc(100% - 20px) top;
+    transform-origin: calc(100% - 32px) top;
     animation: Header__noti--groth ease 0.4s;
     display: none;
+    z-index: 1;
+    border-radius: 2px;
 }
 
 .header__notification::before{ /*Làm dấu mũi tên tam giác*/
@@ -223,6 +308,8 @@
     font-weight: 400;
     text-align: center;
 }
+/* End Header__notification */
+
 
 /* -----------------Authen Modal---------------------- */
 .auth-form{
@@ -355,6 +442,9 @@
 .auth-form__help-focus{
     color: var(--primary-color);
 }
+/* End Authen Modal */
+
+
 /* Header Search */
 .header-with-search{
     height: var(--header-with-search-height);
@@ -364,6 +454,10 @@
 }
 .header__logo{
     width: 200px;
+}
+.header__logo-link{
+    text-decoration: none;
+    color: transparent;
 }
 .header__logo-img{
     width: 150px;
@@ -567,6 +661,7 @@
     box-shadow: 0 0 3px rgb(143, 142, 142);
     display: none;
     overflow: hidden;
+    z-index: 2;
 }
 .header__search-heading{
     margin: 12px 12px;
@@ -597,6 +692,8 @@
     display: block;
 }
 /* End Header__search-history */
+
+
 .header__search-selection{
     border-left: 1px solid #e8e8e8;
     padding-left: 16px;

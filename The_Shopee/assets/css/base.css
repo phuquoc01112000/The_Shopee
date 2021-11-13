@@ -109,3 +109,13 @@ html{
     background-color: #999;
     color: #ccc;
 }
+/* bẻ 4 góc của border-radius */
+.border-radius:first-child{
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.border-radius:last-child{
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
