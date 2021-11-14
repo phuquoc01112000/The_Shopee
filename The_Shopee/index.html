@@ -279,9 +279,60 @@
         </header>
         <!-- ---End Header--- -->
 
-        <div class="container">
+        <div class="person__container">
+            <div class="grid">
+                <div class="grid__row app-content">
+                    <!-- phần category chiếm 2 cột khi chia theo 12 cột, còn lại là phần sản phẩm -->
+                    <div class="grid__column-2">
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                <i class="category__heading-icon fas fa-list"></i>
+                                Danh mục
+                            </h3>
+                            <ul class="category-list ">
+                                <li class="category-item category-item--active"> 
+                                    <!-- active là dấu mũi tên kế bên trái danh mục -->
+                                    <a href="#" class="category-item__link">Văn học hiện đại</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Văn học kinh điển</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Light novel</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="grid__column-10">
+                        <div class="filter">
+                            <span class="home-filter__label">Sắp xếp theo</span>
+                            <button class="btn btn--primary">Phổ biến</button>
+                            <button class="btn">Mới nhất</button>
+                            <button class="btn">Bán chạy</button>
+                            <div class="select-input">
+                                <span class="select-input__label">
+                                    Giá
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </div>
 
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-number">
+                                    <span class="home-filter__page-current">1</span>/14
+                                </span>
+                                <div class="home-filter__page-control">
+                                    <a href="" class="home-filter__page-btn">
+                                    <i class="fas fa-chevron-left"></i>
+                                    <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        
         <div class="footer">
         </div>
         
