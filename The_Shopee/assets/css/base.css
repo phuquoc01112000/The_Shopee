@@ -134,4 +134,38 @@ html{
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
 }
-
+.select-input{
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.select-input:hover .select-input__list{
+    display: block;
+}
+.select-input__list{
+    position: absolute;
+    top: 73%;
+    right: 0;
+    left: 0;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 10px 16px;
+    list-style: none;
+    display: none;
+}
+.select-input__link{
+    display: block;
+    padding: 5px 0;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color:var(--text-color)
+}
+.select-input__link:hover{
+    color: var(--primary-color);   
+}
