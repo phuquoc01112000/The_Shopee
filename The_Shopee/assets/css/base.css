@@ -34,21 +34,28 @@ html{
 .grid__row{
     display: flex;
     flex-wrap: wrap;
-    margin-left: -12px;
-    margin-right: -12px; 
+    margin-left: -5px;
+    margin-right: -5px; 
 }
 
 .grid__column-2{
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 16.666667%;
     line-height: 2.6rem;
 }
+.grid__column-2_4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+    line-height: 2.6rem;
+}
 .grid__column-10{
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 83.3333333%;
 }
+
 /* Animation */
 @keyframes FadeIn{
     from{
